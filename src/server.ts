@@ -39,7 +39,7 @@ initService().then(async ({ redis, mongoose}) => {
 
     const router = new Router();
     router.get('/', ctx => {
-        ctx.body = `Nodejs koa demo project`;
+        ctx.body = `custom Nodejs koa demo project`;
     }).get('/api/get_data_from_redis', async(ctx) => {
         const key = ctx.query.key as string;
         assert(key?.trim(), `key is required`);
